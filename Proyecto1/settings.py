@@ -130,9 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join('C:/Users/usuario/Documents/Programación/Django/Proyecto1/Proyecto1/static')
+     os.path.join(PROJECT_ROOT, 'static')
 ]
 
+PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Default primary key field type
