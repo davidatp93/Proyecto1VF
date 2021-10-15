@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.urls import path
 from Proyecto1.Vistas import generales, especificas, guardarDatos,senal,instruccion, index, registro, manneken, guardarManneken, pantalla_negra, generales_PI,especificas_PI,instruccion_PI, consultar_asociado, lista_desplegable,pan_neg_5s,contador_321,instruccion_IC,generales_IC, especificas_IC,guarda_grupo, generales_II, especificas_II, instruccion_II, generales_PCI, especificas_PCI, generales_ICI, especificas_ICI, anagrama, guardarAnagrama, inicio_anagramas
 from . import Vistas
-from django.config import settings
-from django.config.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
