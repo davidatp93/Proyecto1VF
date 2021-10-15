@@ -1,0 +1,26 @@
+<html>
+    <body><br/>
+    	<h1 align="center">CENTRO UNIVERSITARIO DE CIENCIAS BIOLÓGICAS Y AGROPECUARIAS</h1>
+		<h2 align="center">Centro de Estudios e Investigaciones en Comportamiento</h2>
+		<h3 align="center">Doctorado en Ciencia del Comportamiento: Orientación en Análisis de la Conducta</h3>
+        <h1 align="center">Juego de anagramas</h1>
+		<div align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lCGggVXj4w1TGe_ljopAmRjLkUxDeRhm2m84YpWHCj_gy6_oDba_EnHbqoCyt934p2Y&usqp=CAU"></div>
+        <div align="center"><fieldset align="center" style="display: block; height: auto; width: 80%; margin:0;">
+	        <div align="center">
+                <div style="font-size:30;">Ingresa tu nombre<p style="font-size:22px;">(primer nombre y primer apellido)</p></div>
+				<input style="font-size:26;" id="nombreParticipante" type="text">
+			</div><br/>
+			<input style="background-color:#BCA502;font-size:26px;" type="button" value="Aceptar" onclick="guardarParticipante();">
+			<br/>
+		</fieldset></div>
+    </body>
+
+    <script type="text/javascript">
+        function guardarParticipante()
+        {
+            n=document.getElementById("nombreParticipante").value;
+            sessionStorage.setItem("NOM_PARTICIPANTE", n);
+             window.location='http://127.0.0.1:8000/anagramas/';
+        }
+    </script>
+</html>

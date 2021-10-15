@@ -1,0 +1,39 @@
+{%load static%}
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/anagramas.css'%}">
+	<body align="center"><br/><br/><br/>
+		<span id="time">00:00:00:00</span>
+		<br/>
+		<div align="center" style="display:block">
+			<input id="btnDeshacer" style="background-color:#BCA502;font-size:26px; display: none;" type="button" value="Deshacer" onclick="deshacer();">
+			<input id="btnEmpezar" style="background-color:#BCA502;font-size:26px;" type="button" value="Empezar" onclick="comenzar();">
+		</div>
+		<br/><br/><br/>
+
+		<div align="center" style="display: block;"><fieldset align="center" style="display: block; height: auto; width: 60%; margin:15px;">	
+			<div class="flex-container wrap" id="contenedores">
+			   <div id="contenedor1" class="flex-item" draggable="false"><p></p></div>
+			   <div id="contenedor2" class="flex-item" draggable="false"><p></p></div>
+			   <div id="contenedor3" class="flex-item" draggable="false"><p></p></div>
+			   <div id="contenedor4" class="flex-item" draggable="false"><p></p></div>
+			   <div id="contenedor5" class="flex-item" draggable="false"><p></p></div>
+			</div>
+
+			<div class="flex-container2 wrap" id="tarjetas">
+				<br/>
+				<div id="tarjeta1" class="flex-tarjet" draggable="true">&nbsp;&nbsp;&nbsp;<p style="font-size: 20px;">1</p><br/></div>
+				<div id="tarjeta2" class="flex-tarjet" draggable="true">&nbsp;&nbsp;&nbsp;<p style="font-size: 20px;">2</p><br/></div>
+				<div id="tarjeta3" class="flex-tarjet" draggable="true">&nbsp;&nbsp;&nbsp;<p style="font-size: 20px;">3</p><br/></div>
+				<div id="tarjeta4" class="flex-tarjet" draggable="true">&nbsp;&nbsp;&nbsp;<p style="font-size: 20px;">4</p><br/></div>
+				<div id="tarjeta5" class="flex-tarjet" draggable="true">&nbsp;&nbsp;&nbsp;<p style="font-size: 20px;">5</p><br/></div>
+			</div>
+			<script type="text/javascript" src="{% static '/js/anagramas.js'%}"></script>
+		</fieldset></div>
+		<br/><br/>
+		
+	</body>
+
+</html>

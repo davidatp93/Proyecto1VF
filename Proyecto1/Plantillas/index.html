@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<style>
+		.button
+		{
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 20px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+		.button1 {background-color: #4CAF50;} /* Green */
+		.button2 {background-color: #008CBA;} /* Blue */
+		</style>
+	</head>
+	<body>
+		<br/><h1 align="center">CENTRO UNIVERSITARIO DE CIENCIAS BIOLÓGICAS Y AGROPECUARIAS</h1>
+		<h2 align="center">Centro de Estudios e Investigaciones en Comportamiento</h2></body>
+		<h3 align="center">Doctorado en Ciencia del Comportamiento: Orientación en Análisis de la Conducta</h3>
+		<div align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lCGggVXj4w1TGe_ljopAmRjLkUxDeRhm2m84YpWHCj_gy6_oDba_EnHbqoCyt934p2Y&usqp=CAU"></div>
+		<div align="center"><fieldset align="center" style="display: block; height: auto; width: 80%; margin:0;">	
+			<div id="fase_1" align="center">
+				<button class="button button1" onclick="impred_cont();">Impredecible-Controlable</button>&nbsp;&nbsp;
+				<button class="button button1" onclick="impred_incont();">Impredecible-Incontrolable</button>&nbsp;&nbsp;
+				<button class="button button1" onclick="impred_contInst();">Impredecible-Control instruccional</button>
+			</div>
+			<br/><br/>
+			<div id="fase_2" align="center">
+				<button class="button button2" onclick="pred_cont();">Predecible-Controlable</button>&nbsp;&nbsp;
+				<button class="button button2" onclick="pred_incont();">Predecible-Incontrolable</button>&nbsp;&nbsp;
+				<button class="button button2" onclick="pred_contInst();">Predecible-Control instruccional</button>
+			</div>
+		</fieldset></div>
+		<br/><br/>
+
+	</body>
+
+	<script type="text/javascript">
+		function impred_cont()
+		{
+			let datos = {
+            grupo:"P-C+"
+        	}
+			sessionStorage.setItem("GRUPO", "P-C+");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function impred_incont()
+		{
+			let datos = {
+            grupo:"P-C-"
+        	}
+			sessionStorage.setItem("GRUPO", "P-C-");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function impred_contInst()
+		{
+			let datos = {
+            grupo:"P-CI"
+        	}
+			sessionStorage.setItem("GRUPO", "P-CI");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function pred_cont()
+		{
+			let datos = {
+            grupo:"P+C+"
+        	}
+			sessionStorage.setItem("GRUPO", "P+C+");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function pred_incont()
+		{
+			let datos = {
+            grupo:"P+C-"
+        	}
+			sessionStorage.setItem("GRUPO", "P+C-");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function pred_contInst()
+		{
+			let datos = {
+            grupo:"P+CI"
+        	}
+			sessionStorage.setItem("GRUPO", "P+CI");
+			manda_grupo(datos);
+			//window.location="http://127.0.0.1:8000/registro/";
+		}
+
+		function getCookie(name)
+		{
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '')
+		    {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++)
+		        {
+		            var cookie = jQuery.trim(cookies[i]);
+		            if (cookie.substring(0, name.length + 1) === (name + '='))
+		            {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+
+		function manda_grupo(dat)
+		{
+			//alert(dat["grupo"]);
+			fetch("http://127.0.0.1:8000/guarda_grupo/", {
+            method:"POST",
+            headers:{
+            	"X-CSRFToken":getCookie("csrftoken"),
+                "Accept":'application/json',
+                'X-Requested-With': "XMLHttpRequest"
+            },
+            body:JSON.stringify(dat),
+            mode:'cors',
+            cache: 'default',
+            credentials:'include'
+	        })
+	        .then(
+	            respuesta =>{
+	                respuesta.text().then(
+	                    function(data){
+	                        console.log(data);
+	                    }
+	                );
+	            }
+	        )
+	        .catch(
+	            function(error){
+	                console.log(error);
+	            }
+	        );
+	        window.location="http://127.0.0.1:8000/registro/";
+		}
+	</script>
+</html>

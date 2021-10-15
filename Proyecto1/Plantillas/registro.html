@@ -1,0 +1,102 @@
+<html>
+    <body onload="cargaDatos()">
+    	<h1 align="center">CENTRO UNIVERSITARIO DE CIENCIAS BIOLÓGICAS Y AGROPECUARIAS</h1>
+		<h2 align="center">Centro de Estudios e Investigaciones en Comportamiento</h2></body>
+		<h3 align="center">Doctorado en Ciencia del Comportamiento: Orientación en Análisis de la Conducta</h3>
+		<div align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lCGggVXj4w1TGe_ljopAmRjLkUxDeRhm2m84YpWHCj_gy6_oDba_EnHbqoCyt934p2Y&usqp=CAU"></div>
+        <div align="center"><fieldset align="center" style="display: block; height: auto; width: 80%; margin:0;">
+	        <div align="center">
+				<p style="font-size:26;">ID asociado</p>
+                <select name="codigos" style="font-size:26;" id="idAsociado" type="text">
+                    <option>Selecciona un código</option>
+                </select>
+                <p style="font-size:26;">Ingresa el ID del participante</p>
+				<input style="font-size:26;" id="idPart" type="text">
+			</div><br/>
+			<input style="background-color:#BCA502;font-size:26px;" type="button" value="Aceptar" onclick="guardarID();">
+			<br/>
+		</fieldset></div>
+		
+    </body>
+
+    <script type="text/javascript">
+    	function guardarID()
+    	{
+    		tarea=sessionStorage.getItem("GRUPO");
+    		dato=document.getElementById("idPart").value;
+            asociado=document.getElementById("idAsociado").value;
+    		sessionStorage.setItem("ID_PARTICIPANTE", dato);
+    		sessionStorage.setItem("ID_ASOCIADO",asociado);
+    		if(tarea=='P+C+')
+    		{
+    			window.location='http://127.0.0.1:8000/generales';
+    		}
+    		if(tarea=='P+C-')
+    		{
+    			window.location='http://127.0.0.1:8000/generales_PI';
+    		}
+            if(tarea=='P-C+')
+            {
+                window.location='http://127.0.0.1:8000/generales_IC';
+            }
+            if(tarea=='P-C-')
+            {
+                window.location='http://127.0.0.1:8000/generales_II';
+            }
+            if(tarea=='P+CI')
+            {
+                window.location='http://127.0.0.1:8000/generales_PCI';
+            }
+            if(tarea=='P-CI')
+            {
+                window.location='http://127.0.0.1:8000/generales_ICI';
+            }
+    		
+    	}
+
+        function cargaDatos()
+        {
+            var input = document.getElementById('idAsociado');
+            var t = sessionStorage.getItem("GRUPO");
+            if (t=="P+C+" || t=="P-C+")
+            {
+                input.disabled=true;
+            }
+            else
+            {
+                fetch("http://127.0.0.1:8000/lista_desplegable/")
+                .then((response) =>
+                {
+                    if (response.status !== 200)
+                    {
+                        console.log('Looks like there was a problem. Status Code:' + response.status);
+                        return;
+                    }
+                      // Examine the text in the response
+                    response.json().then(function(data)
+                    {
+                        console.log(data);
+                        addOptions("codigos",data);
+                    });
+                }
+                )
+                .catch(function(err)
+                {
+                    console.log('Fetch Error :-S', err);
+                });
+            }
+        }
+        function addOptions(domElement, array)
+        {
+            var select = document.getElementsByName(domElement)[0];
+
+            for (value in array)
+            {
+                var option = document.createElement("option");
+                option.text = array[value];
+                select.add(option);
+            }
+        }
+	</script>
+
+</html>

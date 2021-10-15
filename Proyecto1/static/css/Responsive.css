@@ -1,0 +1,42 @@
+*{
+    display: block;
+    margin:0;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+	display: block;
+	margin:0;
+	height: auto;
+	width: 100%;
+    border: 0;
+    cursor: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centrado2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+iframe{display:none;}

@@ -1,0 +1,2 @@
+python manage.py makemigrations Pantallas
+python manage.py migrate
