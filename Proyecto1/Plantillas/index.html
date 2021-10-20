@@ -123,7 +123,7 @@
 		{
 			//alert(dat["grupo"]);
 			//fetch("http://127.0.0.1:8000/guarda_grupo/", {
-			fetch("window.href = location.hostname" + "/registro/", {
+			fetch("location.href = location.hostname" + "/registro/", {
             method:"POST",
             headers:{
             	"X-CSRFToken":getCookie("csrftoken"),
@@ -149,7 +149,7 @@
 	                console.log(error);
 	            }
 	        );
-	        	window.href = location.hostname + '/registro/';
+	        	location.href = location.hostname + '/registro/';
 			//window.location="http://127.0.0.1:8000/registro/";
 		}
 	</script>
