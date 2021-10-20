@@ -122,7 +122,8 @@
 		function manda_grupo(dat)
 		{
 			//alert(dat["grupo"]);
-			fetch("http://127.0.0.1:8000/guarda_grupo/", {
+			//fetch("http://127.0.0.1:8000/guarda_grupo/", {
+			fetch("window.location = location.hostname/registro", {
             method:"POST",
             headers:{
             	"X-CSRFToken":getCookie("csrftoken"),
