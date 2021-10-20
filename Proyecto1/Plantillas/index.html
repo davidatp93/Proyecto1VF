@@ -40,6 +40,8 @@
 	</body>
 
 	<script type="text/javascript">
+		sessionStorage.setItem("HOST", `http://127.0.0.1:8000/`);
+
 		function impred_cont()
 		{
 			let datos = {
@@ -123,7 +125,7 @@
 		{
 			//alert(dat["grupo"]);
 			//fetch("http://127.0.0.1:8000/guarda_grupo/", {
-			fetch("https://" + "window.location = location.hostname" + "/registro/", {
+			fetch(`${sessionStorage.getItem('HOST')}/registro/`, {
             method:"POST",
             headers:{
             	"X-CSRFToken":getCookie("csrftoken"),
