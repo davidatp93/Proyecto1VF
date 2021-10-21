@@ -29,27 +29,27 @@
     		sessionStorage.setItem("ID_ASOCIADO",asociado);
     		if(tarea=='P+C+')
     		{
-    			window.location='http://127.0.0.1:8000/generales';
+    			window.location=`${sessionStorage.getItem('HOST')}/generales`;
     		}
     		if(tarea=='P+C-')
     		{
-    			window.location='http://127.0.0.1:8000/generales_PI';
+    			window.location=`${sessionStorage.getItem('HOST')}/generales_PI`;
     		}
             if(tarea=='P-C+')
             {
-                window.location='http://127.0.0.1:8000/generales_IC';
+                window.location=`${sessionStorage.getItem('HOST')}/generales_IC`;
             }
             if(tarea=='P-C-')
             {
-                window.location='http://127.0.0.1:8000/generales_II';
+                window.location=`${sessionStorage.getItem('HOST')}/generales_II`;
             }
             if(tarea=='P+CI')
             {
-                window.location='http://127.0.0.1:8000/generales_PCI';
+                window.location=`${sessionStorage.getItem('HOST')}/generales_PCI`;
             }
             if(tarea=='P-CI')
             {
-                window.location='http://127.0.0.1:8000/generales_ICI';
+                window.location=`${sessionStorage.getItem('HOST')}/generales_ICI`;
             }
     		
     	}
@@ -64,7 +64,7 @@
             }
             else
             {
-                fetch("http://127.0.0.1:8000/lista_desplegable/")
+                fetch(`${sessionStorage.getItem('HOST')}/lista_desplegable/`)
                 .then((response) =>
                 {
                     if (response.status !== 200)
