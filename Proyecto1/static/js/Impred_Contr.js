@@ -202,7 +202,7 @@ function rotarTareas()
         }
 
         //Envío de los datos a Django
-        fetch("http://127.0.0.1:8000/ensayos/", {
+        fetch(`${sessionStorage.getItem('HOST')}/ensayos/`, {
             method:"POST",
             headers:{
                 "X-CSRFToken":getCookie("csrftoken"),
@@ -234,9 +234,9 @@ function rotarTareas()
         ctp++;
         sessionStorage.setItem("CTP",ctp);     
         if (ctp==3 || ctp==6 || ctp==9 || ctp==12 || ctp==15 || ctp==18 || ctp==21 || ctp==24 || ctp==27 || ctp==30 || ctp==33 || ctp==36 || ctp==39 ||ctp== 42 ||ctp==45 ||ctp==48 ||ctp==51 ||ctp==54 ||ctp==57 ||ctp==60 ||ctp==63 ||ctp==66 ||ctp==69 ||ctp==72 ||ctp==75 ||ctp==78)
-      		window.location='http://127.0.0.1:8000/pantalla_negra/';
+      		window.location=`${sessionStorage.getItem('HOST')}/pantalla_negra/`;
         else
-          	window.location='http://127.0.0.1:8000/instruccion_IC/';
+          	window.location=`${sessionStorage.getItem('HOST')}/instruccion_IC/`;
     }
 }
 
@@ -1002,14 +1002,14 @@ function pantalla_conteo()
 {
 	ctp++;
 	sessionStorage.setItem("CTP",ctp);
-	window.location='http://127.0.0.1:8000/contador_321/';
+	window.location=`${sessionStorage.getItem('HOST')}/contador_321/`;
 }
 
 function black_screen()
 {
 	ctp++;
 	sessionStorage.setItem("CTP",ctp);
-	window.location='http://127.0.0.1:8000/pan_neg_5s/';
+	window.location=`${sessionStorage.getItem('HOST')}/pan_neg_5s/`;
 }
 
 //Funciones para medición del tiempo

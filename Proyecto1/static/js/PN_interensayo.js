@@ -25,9 +25,9 @@ function rotarImagenes()
             contPos++;
             sessionStorage.setItem("posicion",contPos);
             if (tarea=='P-C+')
-                window.location='http://127.0.0.1:8000/instruccion_IC/';
+                window.location=`${sessionStorage.getItem('HOST')}/instruccion_IC/`;
             if (tarea=='P-C-' || tarea=='P-CI')
-                window.location='http://127.0.0.1:8000/instruccion_II/';
+                window.location=`${sessionStorage.getItem('HOST')}/instruccion_II/`;
 
         }
         else
@@ -35,17 +35,17 @@ function rotarImagenes()
         	contPos++;
         	sessionStorage.setItem("posicion",contPos);
             if (ctp==39 &&  tipoTarea == 'P-C+' || ctp==39 &&  tipoTarea == 'P-C-' || ctp==39 &&  tipoTarea == 'P-CI')
-                window.location='http://127.0.0.1:8000/manneken';
+                window.location=`${sessionStorage.getItem('HOST')}/manneken`;
             else
             {
                 if (ctp==78 &&  tipoTarea == 'P-C+' || ctp==78 &&  tipoTarea == 'P-C-' || ctp==78 &&  tipoTarea == 'P-CI')
-                    window.location='http://127.0.0.1:8000/manneken';
+                    window.location=`${sessionStorage.getItem('HOST')}/manneken`;
             }
         }
         
         if (tarea=='P+C+' || tarea=='P+C-' || tarea=='P+CI')
         {
-            window.location='http://127.0.0.1:8000/senal';
+            window.location = `${sessionStorage.getItem('HOST')}/senal`;
         }
     }
 }

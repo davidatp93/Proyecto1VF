@@ -189,7 +189,7 @@ function guardar_datos(correcta)
         }
 
 	//Envío de los datos a Django
-       fetch("http://127.0.0.1:8000/saveAnagrama/", {
+	fetch(`${sessionStorage.getItem('HOST')}/saveAnagrama/`, {
             method:"POST",
             headers:{
                 "X-CSRFToken":getCookie("csrftoken"),

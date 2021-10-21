@@ -42,7 +42,7 @@ function encuesta()
 			c:control
 		}
 
-		fetch("http://127.0.0.1:8000/saveManneken/", {
+		fetch(`${sessionStorage.getItem('HOST')}/saveManneken/`, {
             method:"POST",
             headers:{
                 "X-CSRFToken":getCookie("csrftoken"),
@@ -72,26 +72,26 @@ function encuesta()
         //alert(tipoTarea);
         
         if (ctp==39 && tipoTarea == 'P-C-' || ctp==39 &&  tipoTarea == 'P-CI')
-            window.location='http://127.0.0.1:8000/instruccion_II';
+            window.location=`${sessionStorage.getItem('HOST')}/instruccion_II`;
         else
         {
             if (ctp==78 && tipoTarea == 'P-C-' || ctp==78 && tipoTarea == 'P-CI')
-                window.location='http://127.0.0.1:8000/index';
+                window.location=`${sessionStorage.getItem('HOST')}/index`;
         }
 
         if (ctp==39 &&  tipoTarea == 'P-C+')
-        	window.location='http://127.0.0.1:8000/instruccion_IC';
+        	window.location=`${sessionStorage.getItem('HOST')}/instruccion_IC`;
         else
         {
         	if (ctp==78 &&  tipoTarea == 'P-C+')
-        	window.location='http://127.0.0.1:8000/index';
+        	window.location=`${sessionStorage.getItem('HOST')}/index`;
         }
 
         if (nTarea == 26 && tipoTarea != 'P-C+')
-        	window.location='http://127.0.0.1:8000/index';
+        	window.location=`${sessionStorage.getItem('HOST')}/index`;
         else
         	if (tipoTarea != 'P-C+')
-        		window.location='http://127.0.0.1:8000/senal';
+        		window.location=`${sessionStorage.getItem('HOST')}/senal`;
 	}
 	cont++;
 }

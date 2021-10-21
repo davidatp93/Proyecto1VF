@@ -40,7 +40,7 @@
 	</body>
 
 	<script type="text/javascript">
-		sessionStorage.setItem("HOST", `http://127.0.0.1:8000/`);
+		sessionStorage.setItem("HOST", location.origin);
 
 		function impred_cont()
 		{
@@ -124,7 +124,7 @@
 		function manda_grupo(dat)
 		{
 			//alert(dat["grupo"]);
-			//fetch("http://127.0.0.1:8000/guarda_grupo/", {
+			//fetch(`${sessionStorage.getItem('HOST')}/guarda_grupo/", {
 			fetch(`${sessionStorage.getItem('HOST')}/registro/`, {
             method:"POST",
             headers:{
@@ -151,7 +151,8 @@
 	                console.log(error);
 	            }
 	        );
-	        	window.location = 'https://' + location.hostname + '/registro/';
+			debugger
+	        	window.location = `${sessionStorage.getItem('HOST')}/registro/`;
 			//window.location="http://127.0.0.1:8000/registro/";
 		}
 	</script>

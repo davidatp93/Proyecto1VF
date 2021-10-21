@@ -20,13 +20,13 @@ function rotarImagenes()    //Funcion para cambiar de imagen
     {   
         //console.log(ctp);
         if (ctp==9 || ctp==12 || ctp==18 || ctp==27 || ctp==30 || ctp==36 ||ctp==48 ||ctp==51 ||ctp==57 ||ctp==66 ||ctp==69 ||ctp==75)
-            window.location='http://127.0.0.1:8000/pantalla_negra'
+            window.location = `${sessionStorage.getItem('HOST')}/pantalla_negra`
         else
         {
             if (grupo=='P-C+')
-               window.location='http://127.0.0.1:8000/instruccion_IC/';
+               window.location=`${sessionStorage.getItem('HOST')}/instruccion_IC/`;
             if (grupo=='P-C-')
-               window.location='http://127.0.0.1:8000/instruccion_II/';
+               window.location=`${sessionStorage.getItem('HOST')}/instruccion_II/`;
         }
     }
 }

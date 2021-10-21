@@ -12,9 +12,9 @@ function rotarImagenes()
     else
     {
         if (grupo=='P-C+')
-    	   window.location='http://127.0.0.1:8000/instruccion_IC/';
+    	   window.location=`${sessionStorage.getItem('HOST')}/instruccion_IC/`;
         if (grupo=='P-C-')
-           window.location='http://127.0.0.1:8000/instruccion_II/';
+           window.location=`${sessionStorage.getItem('HOST')}/instruccion_II/`;
     }
 }
 

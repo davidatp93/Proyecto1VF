@@ -159,7 +159,7 @@ function rotarTareas()
         }
 
         //Envío de los datos a Django
-        fetch("http://127.0.0.1:8000/ensayos/", {
+        fetch(`${sessionStorage.getItem('HOST')}/ensayos/`, {
             method:"POST",
             headers:{
                 "X-CSRFToken":getCookie("csrftoken"),
@@ -189,9 +189,9 @@ function rotarTareas()
         contOrden++;
         sessionStorage.setItem("ord",contOrden);
         if (contOrden == 13 || contOrden ==26)
-            window.location='http://127.0.0.1:8000/manneken';
+            window.location=`${sessionStorage.getItem('HOST')}/manneken`;
         else
-            window.location='http://127.0.0.1:8000/pantalla_negra/';
+            window.location=`${sessionStorage.getItem('HOST')}/pantalla_negra/`;
     }
 }
 
@@ -1033,7 +1033,7 @@ function cargaDatos()
 {
     var id=sessionStorage.getItem("ID_ASOCIADO");
     let consulta = {clave:id}
-    fetch("http://127.0.0.1:8000/consultar_asociado/", {
+    fetch(`${sessionStorage.getItem('HOST')}/consultar_asociado/`, {
             method:"POST",
             headers:{
                 "X-CSRFToken":getCookie("csrftoken"),

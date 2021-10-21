@@ -27,11 +27,11 @@ function rotarImagenes()    //Funcion para cambiar de imagen
             tarea=sessionStorage.getItem("GRUPO");
             if(tarea=='P+C+')
             {
-                window.location='http://127.0.0.1:8000/instruccion'
+                window.location = `${sessionStorage.getItem('HOST')}/instruccion`
             }
             if(tarea=='P+C-' || tarea=='P+CI')
             {
-                window.location='http://127.0.0.1:8000/instruccion_PI'
+                window.location = `${sessionStorage.getItem('HOST')}/instruccion_PI`
             }
             contador=0;
         }   
