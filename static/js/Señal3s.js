@@ -1,15 +1,15 @@
 //CUENTA REGRESIVA Y PANTALLA NEGRA DEL PREDECIBLE-CONTROLABLE
 var imagenes=new Array(
-    '/static/img/PAN_0.png',            //0
-    '/static/img/PAN_3.png',            //1
-    '/static/img/PAN_2.png',            //2
-    '/static/img/PAN_1.png',            //3
-    '/static/img/PAN_NEG.png',          //4
-    '/static/img/PAN_COMPLETA.png' ,    //5
-    '/static/img/PAN_OPERACION.png',    //6
-    '/static/img/PAN_PRESIONA.png',     //7
-    '/static/img/PAN_SECUENCIA.png',    //8
-    '/static/img/PAN_VER.png',          //9
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_0.png`,            //0
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_3.png`,            //1
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_2.png`,            //2
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_1.png`,            //3
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_NEG.png`,          //4
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_COMPLETA.png'`,    //5
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_OPERACION.png`,    //6
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_PRESIONA.png`,     //7
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_SECUENCIA.png`,    //8
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_VER.png`,          //9
     );
 
 var contador=1;

@@ -1,5 +1,5 @@
 var imagenes=new Array(
-    'http://localhost:8000/static/img/PAN_NEG.png');
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_NEG.png`);
 var contador=0;
 
 function rotarImagenes()

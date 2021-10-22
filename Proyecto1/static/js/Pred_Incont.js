@@ -1,10 +1,10 @@
 var instrucciones=new Array(
-    '/static/img/PAN_COMPLETA.png' ,    //0
-    '/static/img/PAN_OPERACION.png',    //1
-    '/static/img/PAN_PRESIONA.png',     //2
-    '/static/img/PAN_SECUENCIA.png',    //3
-    '/static/img/PAN_VER.png',          //4
-    '/static/img/PAN_ROJA.png',         //5
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_COMPLETA.png` ,    //0
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_OPERACION.png`,    //1
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_PRESIONA.png`,     //2
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_SECUENCIA.png`,    //3
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_VER.png`,          //4
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_ROJA.png`,         //5
     );
 
 var listaSubtipos=new Array(
@@ -39,32 +39,32 @@ var listaSubtipos=new Array(
 var ordenTarea=new Array(0,2,1,3,0,1,3,0,3,2,2,1,0,0,2,1,3,0,1,3,0,3,2,2,1,0);
 
 var tareasPredInc=new Array(
-    '/static/img/P+C+/EN1_ARBOL.png',           //0
-    '/static/img/P+C+/EN2_R.png',               //1
-    '/static/img/P+C+/EN3_34+23.png',           //2
-    '/static/img/P+C+/EN4_4x6p.png',            //3
-    '/static/img/P+C+/EN5_PUERTA.png',          //4
-    '/static/img/P+C+/EN6_48-39.png',           //5
-    '/static/img/P+C+/EN7_pJE3.png',            //6
-    '/static/img/P+C+/EN8_AGUA.png',            //7
-    '/static/img/P+C+/EN9_qe4F.png',            //8
-    '/static/img/P+C+/EN10_5.png',              //9
-    '/static/img/P+C+/EN11_W.png',              //10
-    '/static/img/P+C+/EN12_234-56.png',         //11
-    '/static/img/P+C+/EN13_COMPUTADORA.png',    //12
-    '/static/img/P+C+/EN14_COCINA.png',         //13
-    '/static/img/P+C+/EN15_p.png',              //14
-    '/static/img/P+C+/EN16_41+18.png',          //15
-    '/static/img/P+C+/EN17_qMce.png',           //16
-    '/static/img/P+C+/EN18_AMARILLO.png',       //17
-    '/static/img/P+C+/EN19_199-88.png',         //18
-    '/static/img/P+C+/EN20_EnrW.png',           //19
-    '/static/img/P+C+/EN21_PLANTA.png',         //20
-    '/static/img/P+C+/EN22_iOGe.png',           //21
-    '/static/img/P+C+/EN23_k.png',              //22
-    '/static/img/P+C+/EN24_r.png',              //23
-    '/static/img/P+C+/EN25_45-29.png',          //24
-    '/static/img/P+C+/EN26_HOTEL.png',          //25
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN1_ARBOL.png`,           //0
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN2_R.png`,               //1
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN3_34+23.png`,           //2
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN4_4x6p.png`,            //3
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN5_PUERTA.png`,          //4
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN6_48-39.png`,           //5
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN7_pJE3.png`,            //6
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN8_AGUA.png`,            //7
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN9_qe4F.png`,            //8
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN10_5.png`,              //9
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN11_W.png`,              //10
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN12_234-56.png`,         //11
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN13_COMPUTADORA.png`,    //12
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN14_COCINA.png`,         //13
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN15_p.png`,              //14
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN16_41+18.png`,          //15
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN17_qMce.png`,           //16
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN18_AMARILLO.png`,       //17
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN19_199-88.png`,         //18
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN20_EnrW.png`,           //19
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN21_PLANTA.png`,         //20
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN22_iOGe.png`,           //21
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN23_k.png`,              //22
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN24_r.png`,              //23
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN25_45-29.png`,          //24
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P+C+/EN26_HOTEL.png`,          //25
     );
 
 var sonido_error = document.getElementById('sonido');

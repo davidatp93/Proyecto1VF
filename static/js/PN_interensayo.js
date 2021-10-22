@@ -1,6 +1,6 @@
 //Pantalla negra interensayo
 var imagenes=new Array(
-    'http://localhost:8000/static/img/PAN_NEG.png');
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_NEG.png`);
 
 //var duracion=new Array(25,30,30,35,30,25,35,30,25,25,35,25,30,25,35,35,35,35,30,35,25,30,35,25,30,25);
 var duracion=new Array(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5);

@@ -1,5 +1,5 @@
 var imagenes=new Array(
-    '/static/img/Instrucciones/Instrucciones generales.png',
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones generales.png`
     );
 
 onload=function()

@@ -1,10 +1,10 @@
 var imagenes=new Array(
-    '/static/img/Instrucciones/Instrucciones P+C-.png',
-    '/static/img/Instrucciones/Instrucciones P+C+.png',
-    '/static/img/Instrucciones/Instrucciones P+CI.png',
-    '/static/img/Instrucciones/Instrucciones P-C-.png',
-    '/static/img/Instrucciones/Instrucciones P-C+.png',
-    '/static/img/Instrucciones/Instrucciones P-CI.png',
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P+C-.png`,
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P+C+.png`,
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P+CI.png`,
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P-C-.png`,
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P-C+.png`,
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/Instrucciones/Instrucciones P-CI.png`,
     );
 
 onload=function()

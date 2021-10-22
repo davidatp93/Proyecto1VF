@@ -1,10 +1,10 @@
 var instrucciones=new Array(
-    '/static/img/PAN_COMPLETA.png' ,    //0
-    '/static/img/PAN_OPERACION.png',    //1
-    '/static/img/PAN_PRESIONA.png',     //2
-    '/static/img/PAN_SECUENCIA.png',    //3
-    '/static/img/PAN_VER.png',          //4
-    '/static/img/PAN_ROJA.png',			//5
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_COMPLETA.png` ,    //0
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_OPERACION.png`,    //1
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_PRESIONA.png`,     //2
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_SECUENCIA.png`,    //3
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_VER.png`,          //4
+    `${sessionStorage.getItem('HOST')}/Proyecto1/static/img/PAN_ROJA.png`,			//5
     );
 
 //Tipo de tarea en orden de aparición
@@ -43,32 +43,32 @@ var ordenTarea=new Array(
 	);
 
 var tareasImpredContr=new Array(
-	'/static/img/P-C+/EN1_ARBOL.png',
-	'/static/img/P-C+/EN2_34+23.png',
-	'/static/img/P-C+/EN3_R.png',
-	'/static/img/P-C+/EN4_4x6p.png',
-	'/static/img/P-C+/EN5_PUERTA.png',
-	'/static/img/P-C+/EN6_48-39.png',
-	'/static/img/P-C+/EN7_pJE3.png',
-	'/static/img/P-C+/EN8_AGUA.png',
-	'/static/img/P-C+/EN9_5.png',
-	'/static/img/P-C+/EN10_234-56.png',
-	'/static/img/P-C+/EN11_W.png',
-	'/static/img/P-C+/EN12_qe4F.png',
-	'/static/img/P-C+/EN13_COMPUTADORA.png',
-	'/static/img/P-C+/EN14_COCINA.png',
-	'/static/img/P-C+/EN15_41+18.png',
-	'/static/img/P-C+/EN16_qMce.png',
-	'/static/img/P-C+/EN17_p.png',
-	'/static/img/P-C+/EN18_AMARILLO.png',
-	'/static/img/P-C+/EN19_199-88.png',
-	'/static/img/P-C+/EN20_EnrW.png',
-	'/static/img/P-C+/EN21_PLANTA.png',
-	'/static/img/P-C+/EN22_k.png',
-	'/static/img/P-C+/EN23_45-29.png',
-	'/static/img/P-C+/EN24_r.png',
-	'/static/img/P-C+/EN25_iOGe.png',
-	'/static/img/P-C+/EN26_HOTEL.png',
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN1_ARBOL.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN2_34+23.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN3_R.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN4_4x6p.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN5_PUERTA.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN6_48-39.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN7_pJE3.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN8_AGUA.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN9_5.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN10_234-56.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN11_W.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN12_qe4F.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN13_COMPUTADORA.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN14_COCINA.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN15_41+18.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN16_qMce.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN17_p.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN18_AMARILLO.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN19_199-88.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN20_EnrW.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN21_PLANTA.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN22_k.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN23_45-29.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN24_r.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN25_iOGe.png`,
+	`${sessionStorage.getItem('HOST')}/Proyecto1/static/img/P-C+/EN26_HOTEL.png`,
 	);
 
 var listaSubtipos=new Array(
